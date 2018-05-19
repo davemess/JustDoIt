@@ -1,0 +1,7 @@
+git "git@github.com:davemess/AFNUIUtilities.git" "develop"
+
+git "git@github.com:davemess/AFNAppKit.git" "develop"
+
+git "git@github.com:davemess/OpenWeatherMap.git" "develop"
+
+git "git@github.com:davemess/AFNPermissions.git" "develop"

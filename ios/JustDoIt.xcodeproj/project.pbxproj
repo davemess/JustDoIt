@@ -12,6 +12,10 @@
 		CE65BD3C20706DC60094F620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3A20706DC60094F620 /* Main.storyboard */; };
 		CE65BD3E20706DC60094F620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3D20706DC60094F620 /* Assets.xcassets */; };
 		CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */; };
+		CE93F73620B0841D00DE984A /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; };
+		CE93F73820B0841D00DE984A /* AFNUIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */; };
+		CE93F73A20B0841D00DE984A /* WeatherService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73920B0841D00DE984A /* WeatherService.framework */; };
+		CE93F7C020B0934700DE984A /* AFNPermissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F7BF20B0934700DE984A /* AFNPermissions.framework */; };
 		CEBC2622207153710037A5A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC2621207153710037A5A4 /* Service.swift */; };
 		CEBC262B207157D60037A5A4 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC262A207157D60037A5A4 /* AppFactory.swift */; };
 		CEBC262D207157DF0037A5A4 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC262C207157DF0037A5A4 /* AppServices.swift */; };
@@ -42,6 +46,10 @@
 		CE65BD4F207070A70094F620 /* Distribution.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Distribution.xcconfig; sourceTree = "<group>"; };
 		CE65BD50207070A70094F620 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		CE65BD51207070A70094F620 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		CE93F73520B0841D00DE984A /* AFNAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNUIUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE93F73920B0841D00DE984A /* WeatherService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeatherService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE93F7BF20B0934700DE984A /* AFNPermissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNPermissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBC2621207153710037A5A4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CEBC262A207157D60037A5A4 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		CEBC262C207157DF0037A5A4 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
@@ -52,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE93F73620B0841D00DE984A /* AFNAppKit.framework in Frameworks */,
+				CE93F7C020B0934700DE984A /* AFNPermissions.framework in Frameworks */,
+				CE93F73820B0841D00DE984A /* AFNUIUtilities.framework in Frameworks */,
+				CE93F73A20B0841D00DE984A /* WeatherService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +76,7 @@
 				CE65BD3520706DC60094F620 /* JustDoIt */,
 				CE65BD4D2070708D0094F620 /* Configurations */,
 				CE65BD3420706DC60094F620 /* Products */,
+				CE93F73420B0841D00DE984A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +145,17 @@
 				CE65BD51207070A70094F620 /* Release.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		CE93F73420B0841D00DE984A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7BF20B0934700DE984A /* AFNPermissions.framework */,
+				CE93F73520B0841D00DE984A /* AFNAppKit.framework */,
+				CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */,
+				CE93F73920B0841D00DE984A /* WeatherService.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CEBC2620207153610037A5A4 /* Services */ = {

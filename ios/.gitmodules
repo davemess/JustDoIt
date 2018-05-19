@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/AFNAppKit"]
+	url = git@github.com:davemess/AFNAppKit.git
+[submodule "Carthage/Checkouts/AFNUIUtilities"]
+	url = git@github.com:davemess/AFNUIUtilities.git
+[submodule "Carthage/Checkouts/OpenWeatherMap"]
+	url = git@github.com:davemess/OpenWeatherMap.git

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Notes">
+      <FileRef
+         location = "group:../README.md">
+      </FileRef>
+      <FileRef
+         location = "group:../RELEASE-NOTES.md">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Dependencies">
+      <FileRef
+         location = "group:Carthage/Checkouts/AFNAppKit/AFNAppKit/AFNAppKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/AFNPermissions/AFNPermissions/AFNPermissions.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/AFNUIUtilities/AFNUIUtilities/AFNUIUtilities.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/OpenWeatherMap/WeatherService/WeatherService.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:/Users/davidmessing/Documents/Projects/Repos/misc/JustDoIt/ios/JustDoIt.xcodeproj">
+   </FileRef>
+</Workspace>

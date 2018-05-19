@@ -1,0 +1,12 @@
+[submodule "Carthage/Checkouts/AFNAppKit"]
+	path = ios/Carthage/Checkouts/AFNAppKit
+	url = git@github.com:davemess/AFNAppKit.git
+[submodule "Carthage/Checkouts/AFNUIUtilities"]
+	path = ios/Carthage/Checkouts/AFNUIUtilities
+	url = git@github.com:davemess/AFNUIUtilities.git
+[submodule "Carthage/Checkouts/OpenWeatherMap"]
+	path = ios/Carthage/Checkouts/OpenWeatherMap
+	url = git@github.com:davemess/OpenWeatherMap.git
+[submodule "Carthage/Checkouts/AFNPermissions"]
+	path = ios/Carthage/Checkouts/AFNPermissions
+	url = git@github.com:davemess/AFNPermissions.git

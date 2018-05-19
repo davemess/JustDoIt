@@ -15,7 +15,7 @@
 ```
 git clone git@github.com:davemess/JustDoIt.git
 ```
-2. **Optional:** Update Carthage dependencies. Not required since the dependencies are included in the repo.
+2. Update Carthage dependencies.
 ```
 carthage update --platform iOS
 ```

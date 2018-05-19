@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import AppKit
+import AFNAppKit
 
 /// Core class for providing and configuring external services.
 class AppServices {
