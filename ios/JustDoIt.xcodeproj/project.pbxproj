@@ -107,12 +107,12 @@
 		CE65BD3520706DC60094F620 /* JustDoIt */ = {
 			isa = PBXGroup;
 			children = (
-				CE93F7D520B0A49600DE984A /* Utilities */,
 				CE93F7C120B096CD00DE984A /* Coordinators */,
 				CE65BD4920706E1E0094F620 /* Core */,
 				CE93F7C620B0976E00DE984A /* Factories */,
 				CE65BD4B20706E460094F620 /* Resources */,
 				CE65BD4A20706E250094F620 /* Support Files */,
+				CE93F7D520B0A49600DE984A /* Utilities */,
 				CE65BD4820706E170094F620 /* View Controllers */,
 			);
 			path = JustDoIt;
