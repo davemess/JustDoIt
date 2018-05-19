@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // View heirarchy
     var window: UIWindow?
+    private let rootNavigationController = UINavigationController()
+    private var rootCoordinator: AbstractCoordinator!
     
     // MARK: - lifecycle
     
@@ -37,8 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize services
         initializeLaunchServices(appFactory.launchServices, launchOptions: launchOptions)
-        
-        // TODO: start your engines
+        initializeWindow()
+        initializeRootCoordinator()
         
         return true
     }
@@ -49,6 +51,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchServices.forEach { (service) in
             service.initialize(launchOptions)
         }
+    }
+    
+    private func initializeWindow() {
+        let screenFrame = UIScreen.main.bounds
+        window = UIWindow(frame: screenFrame)
+        window?.rootViewController = rootNavigationController
+        window?.makeKeyAndVisible()
+    }
+    
+    private func initializeRootCoordinator() {
+        let rootCoordinator = appFactory.rootCoordinator(with: rootNavigationController)
+        rootCoordinator.start(false)
+        
+        // must capture var
+        self.rootCoordinator = rootCoordinator
     }
 }
 

@@ -8,14 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CE65BD3720706DC60094F620 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65BD3620706DC60094F620 /* AppDelegate.swift */; };
-		CE65BD3920706DC60094F620 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65BD3820706DC60094F620 /* ViewController.swift */; };
-		CE65BD3C20706DC60094F620 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3A20706DC60094F620 /* Main.storyboard */; };
 		CE65BD3E20706DC60094F620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3D20706DC60094F620 /* Assets.xcassets */; };
 		CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */; };
 		CE93F73620B0841D00DE984A /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; };
 		CE93F73820B0841D00DE984A /* AFNUIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */; };
 		CE93F73A20B0841D00DE984A /* WeatherService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73920B0841D00DE984A /* WeatherService.framework */; };
 		CE93F7C020B0934700DE984A /* AFNPermissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F7BF20B0934700DE984A /* AFNPermissions.framework */; };
+		CE93F7C320B0970F00DE984A /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7C220B0970F00DE984A /* AbstractCoordinator.swift */; };
+		CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7C420B0972200DE984A /* RootAppCoordinator.swift */; };
+		CE93F7CA20B097A800DE984A /* ViewControllerFactoryProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7C920B097A800DE984A /* ViewControllerFactoryProducer.swift */; };
+		CE93F7CC20B097B200DE984A /* TodoItemViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7CB20B097B200DE984A /* TodoItemViewControllerFactory.swift */; };
+		CE93F7CF20B09E9800DE984A /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7CD20B09E9800DE984A /* TodoListViewController.swift */; };
+		CE93F7D020B09E9800DE984A /* TodoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93F7CE20B09E9800DE984A /* TodoListViewController.xib */; };
+		CE93F7D320B0A26D00DE984A /* TodoCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7D120B0A26D00DE984A /* TodoCreateViewController.swift */; };
+		CE93F7D420B0A26D00DE984A /* TodoCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE93F7D220B0A26D00DE984A /* TodoCreateViewController.xib */; };
+		CE93F7D720B0A4A500DE984A /* KeyboardAppearanceResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7D620B0A4A500DE984A /* KeyboardAppearanceResponder.swift */; };
+		CE93F7D920B0A58700DE984A /* BarButtonItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7D820B0A58700DE984A /* BarButtonItemFactory.swift */; };
 		CEBC2622207153710037A5A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC2621207153710037A5A4 /* Service.swift */; };
 		CEBC262B207157D60037A5A4 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC262A207157D60037A5A4 /* AppFactory.swift */; };
 		CEBC262D207157DF0037A5A4 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC262C207157DF0037A5A4 /* AppServices.swift */; };
@@ -37,8 +45,6 @@
 /* Begin PBXFileReference section */
 		CE65BD3320706DC60094F620 /* JustDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustDoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE65BD3620706DC60094F620 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE65BD3820706DC60094F620 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE65BD3B20706DC60094F620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE65BD3D20706DC60094F620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE65BD4020706DC60094F620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE65BD4220706DC60094F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +56,16 @@
 		CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNUIUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93F73920B0841D00DE984A /* WeatherService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WeatherService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE93F7BF20B0934700DE984A /* AFNPermissions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNPermissions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE93F7C220B0970F00DE984A /* AbstractCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractCoordinator.swift; sourceTree = "<group>"; };
+		CE93F7C420B0972200DE984A /* RootAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppCoordinator.swift; sourceTree = "<group>"; };
+		CE93F7C920B097A800DE984A /* ViewControllerFactoryProducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactoryProducer.swift; sourceTree = "<group>"; };
+		CE93F7CB20B097B200DE984A /* TodoItemViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemViewControllerFactory.swift; sourceTree = "<group>"; };
+		CE93F7CD20B09E9800DE984A /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		CE93F7CE20B09E9800DE984A /* TodoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoListViewController.xib; sourceTree = "<group>"; };
+		CE93F7D120B0A26D00DE984A /* TodoCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCreateViewController.swift; sourceTree = "<group>"; };
+		CE93F7D220B0A26D00DE984A /* TodoCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoCreateViewController.xib; sourceTree = "<group>"; };
+		CE93F7D620B0A4A500DE984A /* KeyboardAppearanceResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAppearanceResponder.swift; sourceTree = "<group>"; };
+		CE93F7D820B0A58700DE984A /* BarButtonItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemFactory.swift; sourceTree = "<group>"; };
 		CEBC2621207153710037A5A4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CEBC262A207157D60037A5A4 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		CEBC262C207157DF0037A5A4 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
@@ -91,7 +107,10 @@
 		CE65BD3520706DC60094F620 /* JustDoIt */ = {
 			isa = PBXGroup;
 			children = (
+				CE93F7D520B0A49600DE984A /* Utilities */,
+				CE93F7C120B096CD00DE984A /* Coordinators */,
 				CE65BD4920706E1E0094F620 /* Core */,
+				CE93F7C620B0976E00DE984A /* Factories */,
 				CE65BD4B20706E460094F620 /* Resources */,
 				CE65BD4A20706E250094F620 /* Support Files */,
 				CE65BD4820706E170094F620 /* View Controllers */,
@@ -102,7 +121,10 @@
 		CE65BD4820706E170094F620 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE65BD3820706DC60094F620 /* ViewController.swift */,
+				CE93F7CD20B09E9800DE984A /* TodoListViewController.swift */,
+				CE93F7CE20B09E9800DE984A /* TodoListViewController.xib */,
+				CE93F7D120B0A26D00DE984A /* TodoCreateViewController.swift */,
+				CE93F7D220B0A26D00DE984A /* TodoCreateViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -131,7 +153,6 @@
 			children = (
 				CE65BD3D20706DC60094F620 /* Assets.xcassets */,
 				CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */,
-				CE65BD3A20706DC60094F620 /* Main.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -156,6 +177,33 @@
 				CE93F73920B0841D00DE984A /* WeatherService.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE93F7C120B096CD00DE984A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7C220B0970F00DE984A /* AbstractCoordinator.swift */,
+				CE93F7C420B0972200DE984A /* RootAppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CE93F7C620B0976E00DE984A /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7CB20B097B200DE984A /* TodoItemViewControllerFactory.swift */,
+				CE93F7C920B097A800DE984A /* ViewControllerFactoryProducer.swift */,
+				CE93F7D820B0A58700DE984A /* BarButtonItemFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		CE93F7D520B0A49600DE984A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CE93F7D620B0A4A500DE984A /* KeyboardAppearanceResponder.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		CEBC2620207153610037A5A4 /* Services */ = {
@@ -227,9 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE93F7D020B09E9800DE984A /* TodoListViewController.xib in Resources */,
 				CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */,
+				CE93F7D420B0A26D00DE984A /* TodoCreateViewController.xib in Resources */,
 				CE65BD3E20706DC60094F620 /* Assets.xcassets in Resources */,
-				CE65BD3C20706DC60094F620 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,25 +306,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE93F7CC20B097B200DE984A /* TodoItemViewControllerFactory.swift in Sources */,
+				CE93F7D720B0A4A500DE984A /* KeyboardAppearanceResponder.swift in Sources */,
 				CEBC262B207157D60037A5A4 /* AppFactory.swift in Sources */,
-				CE65BD3920706DC60094F620 /* ViewController.swift in Sources */,
+				CE93F7C320B0970F00DE984A /* AbstractCoordinator.swift in Sources */,
+				CE93F7CF20B09E9800DE984A /* TodoListViewController.swift in Sources */,
+				CE93F7D920B0A58700DE984A /* BarButtonItemFactory.swift in Sources */,
+				CE93F7D320B0A26D00DE984A /* TodoCreateViewController.swift in Sources */,
 				CEBC262D207157DF0037A5A4 /* AppServices.swift in Sources */,
+				CE93F7CA20B097A800DE984A /* ViewControllerFactoryProducer.swift in Sources */,
 				CE65BD3720706DC60094F620 /* AppDelegate.swift in Sources */,
 				CEBC2622207153710037A5A4 /* Service.swift in Sources */,
+				CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE65BD3A20706DC60094F620 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE65BD3B20706DC60094F620 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

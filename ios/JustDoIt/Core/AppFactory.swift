@@ -6,7 +6,7 @@
 //  Copyright © 2018 davemess. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Core factory for producing components necessary for app launch and run.
 class AppFactory {
@@ -18,6 +18,13 @@ class AppFactory {
         return launchServices as! [LaunchService]
     }
     
+    // MARK: - private properties
+    
+    private lazy var viewControllerFactoryProducer: ViewControllerFactoryProducer = {
+        let producer = ViewControllerFactoryProducer()
+        return producer
+    }()
+    
     private let appServices: AppServices
     
     // MARK: - lifecyle
@@ -25,4 +32,19 @@ class AppFactory {
     init(_ appServices: AppServices) {
         self.appServices = appServices
     }
+    
+    // MARK: - public
+    
+    func applicationWindow(_ frame: CGRect) -> UIWindow {
+        let window = UIWindow(frame: frame)
+        return window
+    }
+    
+    func rootCoordinator(with navigationController: UINavigationController) -> AbstractCoordinator {
+        let todoItemViewControllerFactory = viewControllerFactoryProducer.todoItemViewControllerFactory
+        let rootCoordinator = RootAppCoordinator(navigationController, todoItemViewControllerFactory: todoItemViewControllerFactory)
+        
+        return rootCoordinator
+    }
+    
 }
