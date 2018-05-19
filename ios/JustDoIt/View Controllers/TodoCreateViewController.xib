@@ -6,11 +6,16 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodoCreateViewController" customModule="JustDoIt" customModuleProvider="target">
             <connections>
+                <outlet property="_bottomLayoutConstraint" destination="C1X-0I-tBQ" id="pzU-0p-0C6"/>
+                <outlet property="editTextView" destination="D1e-2a-hqT" id="1ms-8c-bOf"/>
+                <outlet property="editView" destination="KzQ-wF-FZz" id="l5q-0D-xYw"/>
+                <outlet property="placeholderView" destination="KKu-td-NJ3" id="BkA-mB-und"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +23,99 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="ItC-zK-zFz">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fql-BN-lfc" userLabel="Content View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="280"/>
+                            <subviews>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KzQ-wF-FZz">
+                                    <rect key="frame" x="8" y="20" width="359" height="240"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="D1e-2a-hqT">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="240"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="240" id="PlT-d7-688"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="e2B-uI-AKF"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-td-NJ3">
+                                    <rect key="frame" x="8" y="20" width="359" height="240"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-rn-36M">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="240"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="240" id="Po9-wz-Uuh"/>
+                                            </constraints>
+                                            <string key="text">What would you like to add to your Todo list?
+
+Remember the🥛?
+Pickup 🍕?
+Practice 🎸?</string>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="Uhx-yj-eja" appends="YES" id="mq0-vp-pcW"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <viewLayoutGuide key="safeArea" id="ggz-vO-Sf9"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="KKu-td-NJ3" secondAttribute="bottom" constant="20" id="17a-h1-UcT"/>
+                                <constraint firstItem="KzQ-wF-FZz" firstAttribute="top" secondItem="fql-BN-lfc" secondAttribute="top" constant="20" id="FV0-59-VF1"/>
+                                <constraint firstItem="KKu-td-NJ3" firstAttribute="leading" secondItem="fql-BN-lfc" secondAttribute="leading" constant="8" id="K1s-6s-kKO"/>
+                                <constraint firstAttribute="bottom" secondItem="KzQ-wF-FZz" secondAttribute="bottom" constant="20" id="NXp-5e-yiQ"/>
+                                <constraint firstItem="KzQ-wF-FZz" firstAttribute="leading" secondItem="fql-BN-lfc" secondAttribute="leading" constant="8" id="lEr-Xc-6Rk"/>
+                                <constraint firstItem="KKu-td-NJ3" firstAttribute="top" secondItem="fql-BN-lfc" secondAttribute="top" constant="20" id="nH2-WJ-Pq3"/>
+                                <constraint firstAttribute="trailing" secondItem="KKu-td-NJ3" secondAttribute="trailing" constant="8" id="qOH-Yn-TYj"/>
+                                <constraint firstAttribute="trailing" secondItem="KzQ-wF-FZz" secondAttribute="trailing" constant="8" id="s7C-kf-ir9"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="fql-BN-lfc" secondAttribute="bottom" id="4UO-Du-pl0"/>
+                        <constraint firstItem="fql-BN-lfc" firstAttribute="leading" secondItem="ItC-zK-zFz" secondAttribute="leading" id="Tbp-IF-xyJ"/>
+                        <constraint firstItem="fql-BN-lfc" firstAttribute="top" secondItem="ItC-zK-zFz" secondAttribute="top" id="XmN-do-afn"/>
+                        <constraint firstAttribute="trailing" secondItem="fql-BN-lfc" secondAttribute="trailing" id="y4O-Is-voz"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ItC-zK-zFz" secondAttribute="bottom" id="C1X-0I-tBQ"/>
+                <constraint firstItem="ItC-zK-zFz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N1l-RG-vFY"/>
+                <constraint firstItem="fql-BN-lfc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="g11-AZ-ekg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ItC-zK-zFz" secondAttribute="trailing" id="wLH-9o-atZ"/>
+                <constraint firstItem="ItC-zK-zFz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zDc-ID-l1D"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="A9r-nW-vgI" appends="YES" id="Bbw-Fg-QNW"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
+        <tapGestureRecognizer id="Uhx-yj-eja">
+            <connections>
+                <action selector="beginEditingTapGestureRecognized:" destination="-1" id="wJ2-kw-Wrr"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="A9r-nW-vgI">
+            <connections>
+                <action selector="endEditingTapGestureRecognized:" destination="-1" id="mid-hA-5gC"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

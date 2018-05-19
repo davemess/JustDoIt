@@ -27,6 +27,9 @@
 		CEBC2622207153710037A5A4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC2621207153710037A5A4 /* Service.swift */; };
 		CEBC262B207157D60037A5A4 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC262A207157D60037A5A4 /* AppFactory.swift */; };
 		CEBC262D207157DF0037A5A4 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBC262C207157DF0037A5A4 /* AppServices.swift */; };
+		CEC5021820B0DEB2006C1F1D /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */; };
+		CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021920B0E159006C1F1D /* ConfirmationDialogFactory.swift */; };
+		CEC5021C20B0E17E006C1F1D /* AlertActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021B20B0E17E006C1F1D /* AlertActionFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +72,9 @@
 		CEBC2621207153710037A5A4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		CEBC262A207157D60037A5A4 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		CEBC262C207157DF0037A5A4 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		CEC5021920B0E159006C1F1D /* ConfirmationDialogFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogFactory.swift; sourceTree = "<group>"; };
+		CEC5021B20B0E17E006C1F1D /* AlertActionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 			children = (
 				CE93F7C120B096CD00DE984A /* Coordinators */,
 				CE65BD4920706E1E0094F620 /* Core */,
+				CEC5021620B0DE9F006C1F1D /* Extensions */,
 				CE93F7C620B0976E00DE984A /* Factories */,
 				CE65BD4B20706E460094F620 /* Resources */,
 				CE65BD4A20706E250094F620 /* Support Files */,
@@ -191,9 +198,11 @@
 		CE93F7C620B0976E00DE984A /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5021B20B0E17E006C1F1D /* AlertActionFactory.swift */,
+				CE93F7D820B0A58700DE984A /* BarButtonItemFactory.swift */,
+				CEC5021920B0E159006C1F1D /* ConfirmationDialogFactory.swift */,
 				CE93F7CB20B097B200DE984A /* TodoItemViewControllerFactory.swift */,
 				CE93F7C920B097A800DE984A /* ViewControllerFactoryProducer.swift */,
-				CE93F7D820B0A58700DE984A /* BarButtonItemFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -212,6 +221,14 @@
 				CEBC2621207153710037A5A4 /* Service.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CEC5021620B0DE9F006C1F1D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,11 +330,14 @@
 				CE93F7CF20B09E9800DE984A /* TodoListViewController.swift in Sources */,
 				CE93F7D920B0A58700DE984A /* BarButtonItemFactory.swift in Sources */,
 				CE93F7D320B0A26D00DE984A /* TodoCreateViewController.swift in Sources */,
+				CEC5021C20B0E17E006C1F1D /* AlertActionFactory.swift in Sources */,
 				CEBC262D207157DF0037A5A4 /* AppServices.swift in Sources */,
 				CE93F7CA20B097A800DE984A /* ViewControllerFactoryProducer.swift in Sources */,
 				CE65BD3720706DC60094F620 /* AppDelegate.swift in Sources */,
 				CEBC2622207153710037A5A4 /* Service.swift in Sources */,
+				CEC5021820B0DEB2006C1F1D /* UITextView+Extensions.swift in Sources */,
 				CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */,
+				CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
