@@ -43,6 +43,7 @@
 		CEC5024720B11630006C1F1D /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024520B11630006C1F1D /* ItemTableViewCell.swift */; };
 		CEC5024820B11630006C1F1D /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */; };
 		CEC5024A20B1B525006C1F1D /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024920B1B525006C1F1D /* CheckButton.swift */; };
+		CEC5024C20B1BDCC006C1F1D /* Item+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024B20B1BDCC006C1F1D /* Item+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		CEC5024520B11630006C1F1D /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		CEC5024920B1B525006C1F1D /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		CEC5024B20B1BDCC006C1F1D /* Item+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +306,7 @@
 		CEC5023620B0ECBB006C1F1D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5024B20B1BDCC006C1F1D /* Item+Extensions.swift */,
 				CEC5024220B11421006C1F1D /* ItemListDataSource.swift */,
 				CEC5022120B0E4FD006C1F1D /* ItemManager.swift */,
 				CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */,
@@ -493,6 +496,7 @@
 			files = (
 				CEC5024320B11421006C1F1D /* ItemListDataSource.swift in Sources */,
 				CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */,
+				CEC5024C20B1BDCC006C1F1D /* Item+Extensions.swift in Sources */,
 				CEC5023F20B11053006C1F1D /* JDIKitError.swift in Sources */,
 				CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */,
 				CEC5023C20B10E2F006C1F1D /* JustDoItModel.xcdatamodeld in Sources */,

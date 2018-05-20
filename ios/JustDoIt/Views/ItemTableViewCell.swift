@@ -10,12 +10,19 @@ import UIKit
 import AFNUIUtilities
 import JDIKit
 
+/// Defines callbacks on ItemTableViewCell.
+protocol ItemTableViewCellDelegate: class {
+    func itemTableViewCellDidDidToggleItemDoneState(_ cell: ItemTableViewCell)
+}
+
 /// Table view cell for displaying an Item.
 class ItemTableViewCell: UITableViewCell, ReusableCell, NibProviding {
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var checkButton: CheckButton!
     @IBOutlet private weak var titleLabel: UILabel!
+    
+    weak var delegate: ItemTableViewCellDelegate?
     
     private struct Constants {
         static let inProgressAlpha: CGFloat = 1.0
@@ -62,7 +69,7 @@ class ItemTableViewCell: UITableViewCell, ReusableCell, NibProviding {
     // MARK: - actions
     
     @IBAction func checkButtonTapped(_ sender: Any) {
-        checkButton.toggle()
+        delegate?.itemTableViewCellDidDidToggleItemDoneState(self)
     }
 }
 

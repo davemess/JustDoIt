@@ -37,6 +37,7 @@ class TodoListViewController: UIViewController {
     init(itemManager: ItemManager) {
         let query = AFNQuery(constraints: [
             .sort(key: "isDone", order: .ascending),
+            .sort(key: "content", order: .ascending),
             ])
         let queryRef: AFNPageRef<Item> = AFNPageRef(query: query)
         
@@ -100,6 +101,15 @@ class TodoListViewController: UIViewController {
         self.present(error)
     }
     
+    private func toggleDoneState(_ item: Item) {
+        item.toggleDone()
+        itemManager.save(item, success: { (item) in
+            // empty implementation
+        }) { (error) in
+            self.present(error)
+        }
+    }
+    
     // MARK: - actions
     
     @objc private func addActionSelected() {
@@ -121,6 +131,7 @@ extension TodoListViewController: UITableViewDataSource {
         let cell: ItemTableViewCell = tableView.dequeueReusableCell(indexPath)
         let item = dataSource.item(at: indexPath)
         cell.configure(with: item)
+        cell.delegate = self
         
         return cell
     }
@@ -148,5 +159,17 @@ extension TodoListViewController: ItemListDataSourceDelegate {
         tableView.moveRow(at: indexPath, to: newIndexPath)
         tableView.reloadRows(at: [newIndexPath], with: .automatic)
         tableView.scrollToRow(at: newIndexPath, at: .top, animated: true)
+    }
+}
+
+extension TodoListViewController: ItemTableViewCellDelegate {
+    
+    func itemTableViewCellDidDidToggleItemDoneState(_ cell: ItemTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        
+        let item = dataSource.item(at: indexPath)
+        toggleDoneState(item)
     }
 }
