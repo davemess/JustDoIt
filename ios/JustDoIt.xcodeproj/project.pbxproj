@@ -10,10 +10,6 @@
 		CE65BD3720706DC60094F620 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE65BD3620706DC60094F620 /* AppDelegate.swift */; };
 		CE65BD3E20706DC60094F620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3D20706DC60094F620 /* Assets.xcassets */; };
 		CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */; };
-		CE93F73620B0841D00DE984A /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; };
-		CE93F73820B0841D00DE984A /* AFNUIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */; };
-		CE93F73A20B0841D00DE984A /* WeatherService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73920B0841D00DE984A /* WeatherService.framework */; };
-		CE93F7C020B0934700DE984A /* AFNPermissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F7BF20B0934700DE984A /* AFNPermissions.framework */; };
 		CE93F7C320B0970F00DE984A /* AbstractCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7C220B0970F00DE984A /* AbstractCoordinator.swift */; };
 		CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7C420B0972200DE984A /* RootAppCoordinator.swift */; };
 		CE93F7CA20B097A800DE984A /* ViewControllerFactoryProducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F7C920B097A800DE984A /* ViewControllerFactoryProducer.swift */; };
@@ -31,8 +27,6 @@
 		CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021920B0E159006C1F1D /* ConfirmationDialogFactory.swift */; };
 		CEC5021C20B0E17E006C1F1D /* AlertActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021B20B0E17E006C1F1D /* AlertActionFactory.swift */; };
 		CEC5022C20B0EC92006C1F1D /* JDIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC5022A20B0EC92006C1F1D /* JDIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEC5022F20B0EC92006C1F1D /* JDIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; };
-		CEC5023020B0EC92006C1F1D /* JDIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC5023920B0ECFB006C1F1D /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5023820B0ECFB006C1F1D /* AFNAppKit.framework */; };
 		CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */; };
 		CEC5023C20B10E2F006C1F1D /* JustDoItModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */; };
@@ -49,10 +43,20 @@
 		CEC5025220B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5025020B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift */; };
 		CEC5025420B1DB04006C1F1D /* Austin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEC5025320B1DB04006C1F1D /* Austin.gpx */; };
 		CEC5025620B1DD3B006C1F1D /* Temperature+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5025520B1DD3B006C1F1D /* Temperature+Formatting.swift */; };
+		CEC5025F20B1E25C006C1F1D /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; };
+		CEC5026020B1E25C006C1F1D /* AFNAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC5026120B1E25C006C1F1D /* AFNPermissions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F7BF20B0934700DE984A /* AFNPermissions.framework */; };
+		CEC5026220B1E25C006C1F1D /* AFNPermissions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F7BF20B0934700DE984A /* AFNPermissions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC5026320B1E25C006C1F1D /* AFNUIUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */; };
+		CEC5026420B1E25C006C1F1D /* AFNUIUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC5026520B1E25D006C1F1D /* WeatherService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73920B0841D00DE984A /* WeatherService.framework */; };
+		CEC5026620B1E25D006C1F1D /* WeatherService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73920B0841D00DE984A /* WeatherService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC5026720B1E25D006C1F1D /* JDIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; };
+		CEC5026820B1E25D006C1F1D /* JDIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CEC5022D20B0EC92006C1F1D /* PBXContainerItemProxy */ = {
+		CEC5026920B1E25D006C1F1D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE65BD2B20706DC60094F620 /* Project object */;
 			proxyType = 1;
@@ -62,13 +66,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CE5430932070760B00AADE35 /* Embed Frameworks */ = {
+		CEC5026B20B1E25D006C1F1D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEC5023020B0EC92006C1F1D /* JDIKit.framework in Embed Frameworks */,
+				CEC5026820B1E25D006C1F1D /* JDIKit.framework in Embed Frameworks */,
+				CEC5026420B1E25C006C1F1D /* AFNUIUtilities.framework in Embed Frameworks */,
+				CEC5026620B1E25D006C1F1D /* WeatherService.framework in Embed Frameworks */,
+				CEC5026020B1E25C006C1F1D /* AFNAppKit.framework in Embed Frameworks */,
+				CEC5026220B1E25C006C1F1D /* AFNPermissions.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,11 +139,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC5022F20B0EC92006C1F1D /* JDIKit.framework in Frameworks */,
-				CE93F73620B0841D00DE984A /* AFNAppKit.framework in Frameworks */,
-				CE93F7C020B0934700DE984A /* AFNPermissions.framework in Frameworks */,
-				CE93F73820B0841D00DE984A /* AFNUIUtilities.framework in Frameworks */,
-				CE93F73A20B0841D00DE984A /* WeatherService.framework in Frameworks */,
+				CEC5026720B1E25D006C1F1D /* JDIKit.framework in Frameworks */,
+				CEC5026320B1E25C006C1F1D /* AFNUIUtilities.framework in Frameworks */,
+				CEC5026520B1E25D006C1F1D /* WeatherService.framework in Frameworks */,
+				CEC5025F20B1E25C006C1F1D /* AFNAppKit.framework in Frameworks */,
+				CEC5026120B1E25C006C1F1D /* AFNPermissions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +378,12 @@
 				CE65BD3020706DC60094F620 /* Frameworks */,
 				CE65BD3120706DC60094F620 /* Resources */,
 				CE65BD4C20706EB80094F620 /* Run Script - Highlight TODOs as Warnings */,
-				CE5430932070760B00AADE35 /* Embed Frameworks */,
+				CEC5026B20B1E25D006C1F1D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CEC5022E20B0EC92006C1F1D /* PBXTargetDependency */,
+				CEC5026A20B1E25D006C1F1D /* PBXTargetDependency */,
 			);
 			name = JustDoIt;
 			productName = HelloApp;
@@ -526,10 +534,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CEC5022E20B0EC92006C1F1D /* PBXTargetDependency */ = {
+		CEC5026A20B1E25D006C1F1D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CEC5022720B0EC92006C1F1D /* JDIKit */;
-			targetProxy = CEC5022D20B0EC92006C1F1D /* PBXContainerItemProxy */;
+			targetProxy = CEC5026920B1E25D006C1F1D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

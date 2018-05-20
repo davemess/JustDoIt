@@ -19,7 +19,7 @@ carthage update --platform iOS
 ```
 3. Open using Xcode. Build and run the Development scheme. There are multiple schemes (Development, Staging, etc.) included with the project.
 
-###### Note: This project requires the WeatherService submodule which will not compile without a `Keys.swift` file. Keys are not included in the public repository due to security concerns. Request the keys from repo owner. 
+###### Note: This project requires the WeatherService submodule which will not compile without a `Keys.swift` file. Keys are not included in the public repository due to security concerns. Request the keys from repo owner.
 
 #### Branching
 Gitflow is the guiding branch strategy. In addition to feature and bug branches, there are long-lived branches:
@@ -34,4 +34,13 @@ There are multiple schemes provided included in the workspace. For development u
 User-defined configuration settings can be found in the xcconfig files in `Configurations` directory.
 
 ## Acknowledgements
-_TBD_
+https://openweathermap.org
+
+## TODOs
+* Better design
+* Edit and delete Todo items
+* Categorize Todo items
+* Use mulitple CD contexts
+* Add an onboarding flow
+* Add Fastlane and distribute to beta testers (TestFlight)
+* CloudKit sync
