@@ -10,13 +10,16 @@ import UIKit
 import AFNAppKit
 import AFNUIUtilities
 import JDIKit
+import AFNPermissions
+import WeatherService
+import CoreLocation
 
 /// Defines callbacks on TodoListViewController.
 protocol TodoListViewControllerDelegate: class {
     func listViewControllerDidSelectAdd(_ viewController: TodoListViewController)
 }
 
-extension TodoListViewController: ErrorAlertRenderer {}
+extension TodoListViewController: ErrorAlertRenderer, PermissionPromptController {}
 
 /// Displays a list of Todo Items.
 class TodoListViewController: UIViewController {
@@ -26,15 +29,18 @@ class TodoListViewController: UIViewController {
     }
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var weatherDisplayView: WeatherDisplayView!
     
     private let itemManager: ItemManager
     private let dataSource: ItemListDataSource
+    private let locationManager: CLLocationManager
+    private let weatherService: WeatherService
     
     weak var delegate: TodoListViewControllerDelegate?
     
     // MARK: - lifecycle
     
-    init(itemManager: ItemManager) {
+    init(itemManager: ItemManager, locationManager: CLLocationManager, weatherService: WeatherService) {
         let query = AFNQuery(constraints: [
             .sort(key: "isDone", order: .ascending),
             .sort(key: "content", order: .ascending),
@@ -43,10 +49,13 @@ class TodoListViewController: UIViewController {
         
         self.itemManager = itemManager
         self.dataSource = itemManager.listDataSource(queryRef: queryRef)
+        self.locationManager = locationManager
+        self.weatherService = weatherService
         
         super.init(nibName: nil, bundle: nil)
         
         self.dataSource.delegate = self
+        self.locationManager.delegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,6 +78,10 @@ class TodoListViewController: UIViewController {
     private func configureView() {
         tableView.registerReusableCell(ItemTableViewCell.self)
         tableView.decelerationRate = UIScrollViewDecelerationRateFast
+        
+        weatherDisplayView.layer.shadowColor = UIColor(white: 0.0, alpha: 0.55).cgColor
+        weatherDisplayView.layer.shadowRadius = 3.0
+        weatherDisplayView.layer.shadowOffset = CGSize(width: 0, height: -3)
     }
     
     private func configureViewController() {
@@ -81,6 +94,8 @@ class TodoListViewController: UIViewController {
         navigationItem.rightBarButtonItem = addItem
         
         self.title = NSLocalizedString("Today", comment: "")
+        
+        weatherDisplayView.delegate = self
     }
     
     // MARK: - data
@@ -91,6 +106,8 @@ class TodoListViewController: UIViewController {
         }) { (error) in
             self.handleError(error)
         }
+        
+        reloadWeather()
     }
     
     private func handleLoad(_ results: [Item]) {
@@ -107,6 +124,38 @@ class TodoListViewController: UIViewController {
             // empty implementation
         }) { (error) in
             self.present(error)
+        }
+    }
+    
+    private func reloadWeather() {
+        let status = permissionStatus(.location)
+        switch status {
+        case .denied, .unknown:
+            weatherDisplayView.state = .needsSetup
+        case .permitted:
+            weatherDisplayView.state = .permitted(message: "Loading Current Weather...")
+            reloadLocationData()
+        }
+    }
+    
+    private func reloadLocationData() {
+        locationManager.startUpdatingLocation()
+    }
+    
+    private func reloadWeatherData(_ coordinate: CLLocationCoordinate2D) {
+        weatherService.getWeather(at: coordinate, success: { (weather) in
+            let message: String
+            if let temp = weather.temperature {
+                let convertedTemp = Measurement(value: temp.value, unit: UnitTemperature.kelvin)
+                let temperatureString = MeasurementFormatter().string(from: convertedTemp)
+                message = String.localizedStringWithFormat(NSLocalizedString("Current temperature is %@", comment: ""), temperatureString)
+            } else {
+                message = NSLocalizedString("Current temperature is unavailable.", comment: "")
+            }
+            
+            self.weatherDisplayView.state = .permitted(message: message)
+        }) { (error) in
+            self.weatherDisplayView.state = .error(message: error.localizedDescription)
         }
     }
     
@@ -171,5 +220,40 @@ extension TodoListViewController: ItemTableViewCellDelegate {
         
         let item = dataSource.item(at: indexPath)
         toggleDoneState(item)
+    }
+}
+
+extension TodoListViewController: WeatherDisplayViewDelegate {
+    
+    func weatherDisplayViewDidTapSetup(_ view: WeatherDisplayView) {
+        let permission: Permission = .location
+        self.checkPermissionWithPromptIfNecessary(permission) { result in
+            switch result {
+            case .accepted:
+                self.weatherDisplayView.state = .permitted(message: "Loading Current Weather...")
+                self.reloadLocationData()
+            case .denied(let permissionError):
+                switch permissionError {
+                case .notAccepted(_), .notGranted(_):
+                    let errorMessage = permissionError.localizedDescription
+                    self.weatherDisplayView.state = .error(message: errorMessage)
+                case .restricted(_):
+                    let errorMessage = NSLocalizedString("Location permission restricted.", comment: "")
+                    self.weatherDisplayView.state = .error(message: errorMessage)
+                }
+            }
+        }
+    }
+}
+
+extension TodoListViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {
+            return
+        }
+        
+        let coordinate = location.coordinate
+        reloadWeatherData(coordinate)
     }
 }

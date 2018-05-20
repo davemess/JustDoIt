@@ -8,6 +8,7 @@
 
 import Foundation
 import JDIKit
+import WeatherService
 
 /// Produces view controller factories.
 struct ViewControllerFactoryProducer {
@@ -16,7 +17,8 @@ struct ViewControllerFactoryProducer {
     
     lazy var todoItemViewControllerFactory: TodoItemViewControllerFactory = {
         let itemManager =  JDIKit.sharedInstance.itemManager
-        let factory = TodoItemViewControllerFactory(itemManager: itemManager)
+        let weatherService = WeatherService()
+        let factory = TodoItemViewControllerFactory(itemManager: itemManager, weatherService: weatherService)
         
         return factory
     }()

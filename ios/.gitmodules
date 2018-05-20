@@ -4,3 +4,5 @@
 	url = git@github.com:davemess/AFNUIUtilities.git
 [submodule "Carthage/Checkouts/OpenWeatherMap"]
 	url = git@github.com:davemess/OpenWeatherMap.git
+[submodule "Carthage/Checkouts/AFNPermissions"]
+	url = git@github.com:davemess/AFNPermissions.git

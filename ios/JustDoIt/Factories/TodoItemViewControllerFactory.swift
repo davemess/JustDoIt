@@ -8,22 +8,33 @@
 
 import Foundation
 import JDIKit
+import WeatherService
+import CoreLocation
 
 /// Factory class for producing TodoItem view controllers.
 class TodoItemViewControllerFactory {
     
     private let itemManager: ItemManager
+    private let weatherService: WeatherService
+    
+    private lazy var locationManager: CLLocationManager = {
+        let locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.distanceFilter = 500
+        return locationManager
+    }()
     
     // MARK: - lifecycle
     
-    init(itemManager: ItemManager) {
+    init(itemManager: ItemManager, weatherService: WeatherService) {
         self.itemManager = itemManager
+        self.weatherService = weatherService
     }
 
     // MARK: - public
     
     func todoListViewController() -> TodoListViewController {
-        let viewController = TodoListViewController(itemManager: itemManager)
+        let viewController = TodoListViewController(itemManager: itemManager, locationManager: locationManager, weatherService: weatherService)
         
         return viewController
     }

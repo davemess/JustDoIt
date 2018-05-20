@@ -44,6 +44,11 @@
 		CEC5024820B11630006C1F1D /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */; };
 		CEC5024A20B1B525006C1F1D /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024920B1B525006C1F1D /* CheckButton.swift */; };
 		CEC5024C20B1BDCC006C1F1D /* Item+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024B20B1BDCC006C1F1D /* Item+Extensions.swift */; };
+		CEC5024E20B1C4FE006C1F1D /* WeatherDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024D20B1C4FE006C1F1D /* WeatherDisplayView.swift */; };
+		CEC5025120B1CEE3006C1F1D /* PermissionError+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024F20B1CEE3006C1F1D /* PermissionError+Display.swift */; };
+		CEC5025220B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5025020B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift */; };
+		CEC5025420B1DB04006C1F1D /* Austin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEC5025320B1DB04006C1F1D /* Austin.gpx */; };
+		CEC5025620B1DD3B006C1F1D /* Temperature+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5025520B1DD3B006C1F1D /* Temperature+Formatting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +119,11 @@
 		CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		CEC5024920B1B525006C1F1D /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		CEC5024B20B1BDCC006C1F1D /* Item+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Extensions.swift"; sourceTree = "<group>"; };
+		CEC5024D20B1C4FE006C1F1D /* WeatherDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayView.swift; sourceTree = "<group>"; };
+		CEC5024F20B1CEE3006C1F1D /* PermissionError+Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PermissionError+Display.swift"; sourceTree = "<group>"; };
+		CEC5025020B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PermissionPromptController.swift"; sourceTree = "<group>"; };
+		CEC5025320B1DB04006C1F1D /* Austin.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Austin.gpx; path = ../../../../../../../../Desktop/Austin.gpx; sourceTree = "<group>"; };
+		CEC5025520B1DD3B006C1F1D /* Temperature+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Temperature+Formatting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +219,7 @@
 		CE65BD4B20706E460094F620 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5025320B1DB04006C1F1D /* Austin.gpx */,
 				CE65BD3D20706DC60094F620 /* Assets.xcassets */,
 				CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */,
 			);
@@ -279,7 +290,10 @@
 			isa = PBXGroup;
 			children = (
 				CEC5024020B112A8006C1F1D /* JDIKitError+ErrorAlert.swift */,
+				CEC5024F20B1CEE3006C1F1D /* PermissionError+Display.swift */,
+				CEC5025520B1DD3B006C1F1D /* Temperature+Formatting.swift */,
 				CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */,
+				CEC5025020B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -329,6 +343,7 @@
 				CEC5024520B11630006C1F1D /* ItemTableViewCell.swift */,
 				CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */,
 				CEC5024920B1B525006C1F1D /* CheckButton.swift */,
+				CEC5024D20B1C4FE006C1F1D /* WeatherDisplayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE93F7D020B09E9800DE984A /* TodoListViewController.xib in Resources */,
+				CEC5025420B1DB04006C1F1D /* Austin.gpx in Resources */,
 				CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */,
 				CE93F7D420B0A26D00DE984A /* TodoCreateViewController.xib in Resources */,
 				CEC5024820B11630006C1F1D /* ItemTableViewCell.xib in Resources */,
@@ -469,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC5025120B1CEE3006C1F1D /* PermissionError+Display.swift in Sources */,
 				CE93F7CC20B097B200DE984A /* TodoItemViewControllerFactory.swift in Sources */,
 				CE93F7D720B0A4A500DE984A /* KeyboardAppearanceResponder.swift in Sources */,
 				CEBC262B207157D60037A5A4 /* AppFactory.swift in Sources */,
@@ -481,10 +498,13 @@
 				CEBC262D207157DF0037A5A4 /* AppServices.swift in Sources */,
 				CE93F7CA20B097A800DE984A /* ViewControllerFactoryProducer.swift in Sources */,
 				CE65BD3720706DC60094F620 /* AppDelegate.swift in Sources */,
+				CEC5025620B1DD3B006C1F1D /* Temperature+Formatting.swift in Sources */,
 				CEBC2622207153710037A5A4 /* Service.swift in Sources */,
 				CEC5021820B0DEB2006C1F1D /* UITextView+Extensions.swift in Sources */,
+				CEC5025220B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift in Sources */,
 				CEC5024120B112A8006C1F1D /* JDIKitError+ErrorAlert.swift in Sources */,
 				CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */,
+				CEC5024E20B1C4FE006C1F1D /* WeatherDisplayView.swift in Sources */,
 				CEC5024720B11630006C1F1D /* ItemTableViewCell.swift in Sources */,
 				CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */,
 			);

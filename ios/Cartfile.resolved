@@ -1,4 +1,4 @@
 git "git@github.com:davemess/AFNAppKit.git" "df3251e0eb6ea5707eb6849c7c26125a014ab165"
 git "git@github.com:davemess/AFNPermissions.git" "40277ab5bea51316b059a2a6b634e7eafd646e84"
 git "git@github.com:davemess/AFNUIUtilities.git" "a0df9ff49e96bc8a013ba6e1bc9fadfb0e367bf4"
-git "git@github.com:davemess/OpenWeatherMap.git" "8ec79c6e747650f0ad927c3fc2fafdaf11a7735d"
+git "git@github.com:davemess/OpenWeatherMap.git" "fd17ca1ebd2eeb668639a5f415e72c69bd4f7fb6"
