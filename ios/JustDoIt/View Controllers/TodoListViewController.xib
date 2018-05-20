@@ -35,8 +35,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOO-3h-PzC">
-                                    <rect key="frame" x="111" y="15" width="152" height="30"/>
-                                    <state key="normal" title="Tap To Setup Weather"/>
+                                    <rect key="frame" x="108" y="15" width="158" height="30"/>
+                                    <state key="normal" title="Tap To Set Up Weather"/>
                                     <connections>
                                         <action selector="setupButtonTapped:" destination="uaF-2l-YLS" eventType="touchUpInside" id="Qoa-kt-TNW"/>
                                     </connections>

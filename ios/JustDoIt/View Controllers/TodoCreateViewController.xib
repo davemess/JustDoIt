@@ -55,10 +55,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="240" id="Po9-wz-Uuh"/>
                                             </constraints>
-                                            <string key="text">What would you like to add to your Todo list?
+                                            <string key="text">What would you like to add to your To-Do list?
 
 Remember the🥛?
-Pickup 🍕?
+Pick up 🍕?
 Practice 🎸?</string>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
