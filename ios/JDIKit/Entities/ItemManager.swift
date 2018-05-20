@@ -51,7 +51,7 @@ public class ItemManager {
         self.managedObjectContextProvider = managedObjectContextProvider
     }
     
-    // MARK: - pubulic
+    // MARK: - public
     
     public func builder() -> Builder {
         let context = managedObjectContextProvider.viewContext
