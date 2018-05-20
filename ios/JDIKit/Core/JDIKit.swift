@@ -12,11 +12,6 @@ import CoreData
 
 /// Entry point to the concrete classes of the JDIKit.
 public class JDIKit {
-    
-    public enum JDIKitError: Error {
-        case missingManagedObjectModel
-        case missingManagedObjectContext
-    }
 
     // MARK: - public properties
     

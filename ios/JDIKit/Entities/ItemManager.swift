@@ -30,7 +30,16 @@ public class ItemManager {
         // MARK: - public
         
         func build(success: @escaping (Item) -> Void, failure: @escaping (Error) -> Void) {
+            guard let content = content, content.count > 0 else {
+                let reason = NSLocalizedString("Content is required.", comment: "")
+                let error = JDIKitError.validationFailure(reason: reason)
+                failure(error)
+                return
+            }
             
+            let item = Item(context: managedObjectContext)
+            item.content = self.content
+            success(item)
         }
     }
     
@@ -57,6 +66,16 @@ public class ItemManager {
     }
     
     public func save(_ item: Item, success: @escaping (Item) -> Void, failure: @escaping (Error) -> Void) {
+        guard let context = item.managedObjectContext else {
+            failure(JDIKitError.missingManagedObjectContext)
+            return
+        }
         
+        do {
+            try context.save()
+            success(item)
+        } catch {
+            failure(error)
+        }
     }
 }

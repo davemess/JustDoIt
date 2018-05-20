@@ -37,6 +37,8 @@
 		CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */; };
 		CEC5023C20B10E2F006C1F1D /* JustDoItModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */; };
 		CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5022120B0E4FD006C1F1D /* ItemManager.swift */; };
+		CEC5023F20B11053006C1F1D /* JDIKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5023E20B11053006C1F1D /* JDIKitError.swift */; };
+		CEC5024120B112A8006C1F1D /* JDIKitError+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024020B112A8006C1F1D /* JDIKitError+ErrorAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		CEC5022B20B0EC92006C1F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC5023820B0ECFB006C1F1D /* AFNAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDIKit.swift; sourceTree = "<group>"; };
+		CEC5023E20B11053006C1F1D /* JDIKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDIKitError.swift; sourceTree = "<group>"; };
+		CEC5024020B112A8006C1F1D /* JDIKitError+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JDIKitError+ErrorAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +268,7 @@
 		CEC5021620B0DE9F006C1F1D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5024020B112A8006C1F1D /* JDIKitError+ErrorAlert.swift */,
 				CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */,
 			);
 			path = Extensions;
@@ -308,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */,
+				CEC5023E20B11053006C1F1D /* JDIKitError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				CE65BD3720706DC60094F620 /* AppDelegate.swift in Sources */,
 				CEBC2622207153710037A5A4 /* Service.swift in Sources */,
 				CEC5021820B0DEB2006C1F1D /* UITextView+Extensions.swift in Sources */,
+				CEC5024120B112A8006C1F1D /* JDIKitError+ErrorAlert.swift in Sources */,
 				CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */,
 				CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */,
 			);
@@ -470,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */,
+				CEC5023F20B11053006C1F1D /* JDIKitError.swift in Sources */,
 				CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */,
 				CEC5023C20B10E2F006C1F1D /* JustDoItModel.xcdatamodeld in Sources */,
 			);
