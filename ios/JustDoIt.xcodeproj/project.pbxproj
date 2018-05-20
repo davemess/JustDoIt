@@ -30,7 +30,24 @@
 		CEC5021820B0DEB2006C1F1D /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */; };
 		CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021920B0E159006C1F1D /* ConfirmationDialogFactory.swift */; };
 		CEC5021C20B0E17E006C1F1D /* AlertActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021B20B0E17E006C1F1D /* AlertActionFactory.swift */; };
+		CEC5022C20B0EC92006C1F1D /* JDIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC5022A20B0EC92006C1F1D /* JDIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEC5022F20B0EC92006C1F1D /* JDIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; };
+		CEC5023020B0EC92006C1F1D /* JDIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEC5023920B0ECFB006C1F1D /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5023820B0ECFB006C1F1D /* AFNAppKit.framework */; };
+		CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */; };
+		CEC5023C20B10E2F006C1F1D /* JustDoItModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */; };
+		CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5022120B0E4FD006C1F1D /* ItemManager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEC5022D20B0EC92006C1F1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE65BD2B20706DC60094F620 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEC5022720B0EC92006C1F1D;
+			remoteInfo = JDIKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CE5430932070760B00AADE35 /* Embed Frameworks */ = {
@@ -39,6 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CEC5023020B0EC92006C1F1D /* JDIKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +93,13 @@
 		CEC5021720B0DEB2006C1F1D /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
 		CEC5021920B0E159006C1F1D /* ConfirmationDialogFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationDialogFactory.swift; sourceTree = "<group>"; };
 		CEC5021B20B0E17E006C1F1D /* AlertActionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionFactory.swift; sourceTree = "<group>"; };
+		CEC5021F20B0E372006C1F1D /* JustDoItModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JustDoItModel.xcdatamodel; sourceTree = "<group>"; };
+		CEC5022120B0E4FD006C1F1D /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		CEC5022820B0EC92006C1F1D /* JDIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JDIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC5022A20B0EC92006C1F1D /* JDIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDIKit.h; sourceTree = "<group>"; };
+		CEC5022B20B0EC92006C1F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC5023820B0ECFB006C1F1D /* AFNAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +107,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC5022F20B0EC92006C1F1D /* JDIKit.framework in Frameworks */,
 				CE93F73620B0841D00DE984A /* AFNAppKit.framework in Frameworks */,
 				CE93F7C020B0934700DE984A /* AFNPermissions.framework in Frameworks */,
 				CE93F73820B0841D00DE984A /* AFNUIUtilities.framework in Frameworks */,
 				CE93F73A20B0841D00DE984A /* WeatherService.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC5022420B0EC92006C1F1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC5023920B0ECFB006C1F1D /* AFNAppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +131,7 @@
 			children = (
 				CE65BD3520706DC60094F620 /* JustDoIt */,
 				CE65BD4D2070708D0094F620 /* Configurations */,
+				CEC5022920B0EC92006C1F1D /* JDIKit */,
 				CE65BD3420706DC60094F620 /* Products */,
 				CE93F73420B0841D00DE984A /* Frameworks */,
 			);
@@ -106,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CE65BD3320706DC60094F620 /* JustDoIt.app */,
+				CEC5022820B0EC92006C1F1D /* JDIKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +153,7 @@
 				CE65BD4920706E1E0094F620 /* Core */,
 				CEC5021620B0DE9F006C1F1D /* Extensions */,
 				CE93F7C620B0976E00DE984A /* Factories */,
+				CEC5021D20B0E347006C1F1D /* Model */,
 				CE65BD4B20706E460094F620 /* Resources */,
 				CE65BD4A20706E250094F620 /* Support Files */,
 				CE93F7D520B0A49600DE984A /* Utilities */,
@@ -178,6 +215,7 @@
 		CE93F73420B0841D00DE984A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEC5023820B0ECFB006C1F1D /* AFNAppKit.framework */,
 				CE93F7BF20B0934700DE984A /* AFNPermissions.framework */,
 				CE93F73520B0841D00DE984A /* AFNAppKit.framework */,
 				CE93F73720B0841D00DE984A /* AFNUIUtilities.framework */,
@@ -231,7 +269,61 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CEC5021D20B0E347006C1F1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CEC5022920B0EC92006C1F1D /* JDIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5023720B0ECD1006C1F1D /* Core */,
+				CEC5023620B0ECBB006C1F1D /* Entities */,
+				CEC5023520B0ECAD006C1F1D /* Support Files */,
+			);
+			path = JDIKit;
+			sourceTree = "<group>";
+		};
+		CEC5023520B0ECAD006C1F1D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5022A20B0EC92006C1F1D /* JDIKit.h */,
+				CEC5022B20B0EC92006C1F1D /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		CEC5023620B0ECBB006C1F1D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */,
+				CEC5022120B0E4FD006C1F1D /* ItemManager.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CEC5023720B0ECD1006C1F1D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CEC5022520B0EC92006C1F1D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC5022C20B0EC92006C1F1D /* JDIKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CE65BD3220706DC60094F620 /* JustDoIt */ = {
@@ -247,11 +339,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				CEC5022E20B0EC92006C1F1D /* PBXTargetDependency */,
 			);
 			name = JustDoIt;
 			productName = HelloApp;
 			productReference = CE65BD3320706DC60094F620 /* JustDoIt.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CEC5022720B0EC92006C1F1D /* JDIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEC5023120B0EC92006C1F1D /* Build configuration list for PBXNativeTarget "JDIKit" */;
+			buildPhases = (
+				CEC5022320B0EC92006C1F1D /* Sources */,
+				CEC5022420B0EC92006C1F1D /* Frameworks */,
+				CEC5022520B0EC92006C1F1D /* Headers */,
+				CEC5022620B0EC92006C1F1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JDIKit;
+			productName = JDIKit;
+			productReference = CEC5022820B0EC92006C1F1D /* JDIKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -265,6 +376,11 @@
 				TargetAttributes = {
 					CE65BD3220706DC60094F620 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					CEC5022720B0EC92006C1F1D = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -283,6 +399,7 @@
 			projectRoot = "";
 			targets = (
 				CE65BD3220706DC60094F620 /* JustDoIt */,
+				CEC5022720B0EC92006C1F1D /* JDIKit */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +413,13 @@
 				CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */,
 				CE93F7D420B0A26D00DE984A /* TodoCreateViewController.xib in Resources */,
 				CE65BD3E20706DC60094F620 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEC5022620B0EC92006C1F1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +465,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEC5022320B0EC92006C1F1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */,
+				CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */,
+				CEC5023C20B10E2F006C1F1D /* JustDoItModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEC5022E20B0EC92006C1F1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEC5022720B0EC92006C1F1D /* JDIKit */;
+			targetProxy = CEC5022D20B0EC92006C1F1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */ = {
@@ -472,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE65BD50207070A70094F620 /* Debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3DZMTG4N6;
@@ -488,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE65BD51207070A70094F620 /* Release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3DZMTG4N6;
@@ -557,6 +701,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE65BD4F207070A70094F620 /* Distribution.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3DZMTG4N6;
@@ -566,6 +711,88 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Distribution;
+		};
+		CEC5023220B0EC92006C1F1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/JDIKit/Support Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davemess.JDIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CEC5023320B0EC92006C1F1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/JDIKit/Support Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davemess.JDIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CEC5023420B0EC92006C1F1D /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F3DZMTG4N6;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/JDIKit/Support Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.davemess.JDIKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Distribution;
 		};
@@ -592,7 +819,30 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		CEC5023120B0EC92006C1F1D /* Build configuration list for PBXNativeTarget "JDIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEC5023220B0EC92006C1F1D /* Debug */,
+				CEC5023320B0EC92006C1F1D /* Release */,
+				CEC5023420B0EC92006C1F1D /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEC5021F20B0E372006C1F1D /* JustDoItModel.xcdatamodel */,
+			);
+			currentVersion = CEC5021F20B0E372006C1F1D /* JustDoItModel.xcdatamodel */;
+			path = JustDoItModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE65BD2B20706DC60094F620 /* Project object */;
 }

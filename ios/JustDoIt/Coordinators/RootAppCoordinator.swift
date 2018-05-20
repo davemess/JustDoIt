@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JDIKit
 
 /// Navigation coordinator for root application context.
 class RootAppCoordinator: AbstractCoordinator {
@@ -50,7 +51,7 @@ extension RootAppCoordinator: TodoCreateViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
     
-    func createViewControllerDidFinish(_ controller: TodoCreateViewController) {
+    func createViewController(_ controller: TodoCreateViewController, didFinishWith item: Item) {
         controller.dismiss(animated: true, completion: nil)
     }
 }

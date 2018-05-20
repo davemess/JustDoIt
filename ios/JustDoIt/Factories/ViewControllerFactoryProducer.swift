@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import JDIKit
 
 /// Produces view controller factories.
 struct ViewControllerFactoryProducer {
@@ -14,7 +15,8 @@ struct ViewControllerFactoryProducer {
     // MARK: - public
     
     lazy var todoItemViewControllerFactory: TodoItemViewControllerFactory = {
-        let factory = TodoItemViewControllerFactory()
+        let itemManager =  JDIKit.sharedInstance.itemManager
+        let factory = TodoItemViewControllerFactory(itemManager: itemManager)
         
         return factory
     }()

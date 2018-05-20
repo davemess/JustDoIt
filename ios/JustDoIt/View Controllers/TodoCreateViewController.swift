@@ -8,14 +8,15 @@
 
 import UIKit
 import AFNUIUtilities
+import JDIKit
 
 /// Defines callbacks on TodoCreateViewController.
 protocol TodoCreateViewControllerDelegate: class {
     func createViewControllerDidDismiss(_ controller: TodoCreateViewController)
-    func createViewControllerDidFinish(_ controller: TodoCreateViewController)
+    func createViewController(_ controller: TodoCreateViewController, didFinishWith item: Item)
 }
 
-extension TodoCreateViewController: KeyboardAppearanceResponder, KeyboardObserverDelegate {
+extension TodoCreateViewController: KeyboardAppearanceResponder, KeyboardObserverDelegate, ErrorAlertRenderer {
 
     var standardOffset: CGFloat {
         return 0.0
@@ -48,6 +49,7 @@ class TodoCreateViewController: UIViewController {
     override var shouldAutorotate: Bool { return false }
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation { return .portrait }
     
+    private let itemManager: ItemManager
     weak var delegate: TodoCreateViewControllerDelegate?
     
     private var state: State = .empty {
@@ -58,14 +60,26 @@ class TodoCreateViewController: UIViewController {
     
     private var keyboardObserver = KeyboardObserver([.willShow, .willHide])
     
+    // MARK: - lifecycle
+    
+    init(itemManager: ItemManager) {
+        self.itemManager = itemManager
+        
+        super.init(nibName: nil, bundle: nil)
+        
+        self.keyboardObserver.delegate = self
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - view lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureViewController()
-        
-        self.keyboardObserver.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -117,6 +131,17 @@ class TodoCreateViewController: UIViewController {
     
     // MARK: - data
     
+    private func save() {
+        let builder = itemManager.builder()
+        builder.content = editTextView.text
+        
+        itemManager.create(builder, success: { (item) in
+            self.delegate?.createViewController(self, didFinishWith: item)
+        }) { (error) in
+            self.present(error)
+        }
+    }
+    
     // MARK: - actions
     
     @objc private func cancelActionSelected() {
@@ -128,7 +153,7 @@ class TodoCreateViewController: UIViewController {
     @objc private func saveActionSelected() {
         hideKeyboard()
         
-        self.delegate?.createViewControllerDidFinish(self)
+        save()
     }
     
     @IBAction func beginEditingTapGestureRecognized(_ sender: UITapGestureRecognizer) {

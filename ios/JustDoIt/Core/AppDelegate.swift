@@ -8,6 +8,7 @@
 
 import UIKit
 import AFNAppKit
+import JDIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize services
         initializeLaunchServices(appFactory.launchServices, launchOptions: launchOptions)
+        initializeJDIKit()
         initializeWindow()
         initializeRootCoordinator()
         
@@ -50,6 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initializeLaunchServices(_ launchServices: [LaunchService], launchOptions: [UIApplicationLaunchOptionsKey : Any]?) {
         launchServices.forEach { (service) in
             service.initialize(launchOptions)
+        }
+    }
+    
+    private func initializeJDIKit() {
+        JDIKit.initialize { (success, error) in
+            if let error = error {
+                assert(success, "JDIKit initialize required")
+            }
         }
     }
     
