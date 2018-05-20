@@ -1,8 +1,6 @@
 # JustDoIt
 
-```
-// An example iOS Todo app.
-```
+#### An example iOS Todo app. This is not full-featured, but it's meant to establish a base architectural pattern for adding features.
 
 ## Requirements
 * Xcode 9.3
