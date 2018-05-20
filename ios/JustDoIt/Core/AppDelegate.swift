@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func initializeJDIKit() {
         JDIKit.initialize { (success, error) in
-            if let error = error {
+            if let _ = error {
                 assert(success, "JDIKit initialize required")
             }
         }

@@ -39,6 +39,10 @@
 		CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5022120B0E4FD006C1F1D /* ItemManager.swift */; };
 		CEC5023F20B11053006C1F1D /* JDIKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5023E20B11053006C1F1D /* JDIKitError.swift */; };
 		CEC5024120B112A8006C1F1D /* JDIKitError+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024020B112A8006C1F1D /* JDIKitError+ErrorAlert.swift */; };
+		CEC5024320B11421006C1F1D /* ItemListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024220B11421006C1F1D /* ItemListDataSource.swift */; };
+		CEC5024720B11630006C1F1D /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024520B11630006C1F1D /* ItemTableViewCell.swift */; };
+		CEC5024820B11630006C1F1D /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */; };
+		CEC5024A20B1B525006C1F1D /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024920B1B525006C1F1D /* CheckButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		CEC5023A20B0EDE1006C1F1D /* JDIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDIKit.swift; sourceTree = "<group>"; };
 		CEC5023E20B11053006C1F1D /* JDIKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JDIKitError.swift; sourceTree = "<group>"; };
 		CEC5024020B112A8006C1F1D /* JDIKitError+ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JDIKitError+ErrorAlert.swift"; sourceTree = "<group>"; };
+		CEC5024220B11421006C1F1D /* ItemListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListDataSource.swift; sourceTree = "<group>"; };
+		CEC5024520B11630006C1F1D /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		CEC5024920B1B525006C1F1D /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,11 +165,11 @@
 				CE65BD4920706E1E0094F620 /* Core */,
 				CEC5021620B0DE9F006C1F1D /* Extensions */,
 				CE93F7C620B0976E00DE984A /* Factories */,
-				CEC5021D20B0E347006C1F1D /* Model */,
 				CE65BD4B20706E460094F620 /* Resources */,
 				CE65BD4A20706E250094F620 /* Support Files */,
 				CE93F7D520B0A49600DE984A /* Utilities */,
 				CE65BD4820706E170094F620 /* View Controllers */,
+				CEC5024420B114AF006C1F1D /* Views */,
 			);
 			path = JustDoIt;
 			sourceTree = "<group>";
@@ -274,13 +282,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CEC5021D20B0E347006C1F1D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		CEC5022920B0EC92006C1F1D /* JDIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,8 +304,9 @@
 		CEC5023620B0ECBB006C1F1D /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */,
+				CEC5024220B11421006C1F1D /* ItemListDataSource.swift */,
 				CEC5022120B0E4FD006C1F1D /* ItemManager.swift */,
+				CEC5021E20B0E372006C1F1D /* JustDoItModel.xcdatamodeld */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -316,6 +318,16 @@
 				CEC5023E20B11053006C1F1D /* JDIKitError.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		CEC5024420B114AF006C1F1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEC5024520B11630006C1F1D /* ItemTableViewCell.swift */,
+				CEC5024620B11630006C1F1D /* ItemTableViewCell.xib */,
+				CEC5024920B1B525006C1F1D /* CheckButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +430,7 @@
 				CE93F7D020B09E9800DE984A /* TodoListViewController.xib in Resources */,
 				CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */,
 				CE93F7D420B0A26D00DE984A /* TodoCreateViewController.xib in Resources */,
+				CEC5024820B11630006C1F1D /* ItemTableViewCell.xib in Resources */,
 				CE65BD3E20706DC60094F620 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +470,7 @@
 				CE93F7D720B0A4A500DE984A /* KeyboardAppearanceResponder.swift in Sources */,
 				CEBC262B207157D60037A5A4 /* AppFactory.swift in Sources */,
 				CE93F7C320B0970F00DE984A /* AbstractCoordinator.swift in Sources */,
+				CEC5024A20B1B525006C1F1D /* CheckButton.swift in Sources */,
 				CE93F7CF20B09E9800DE984A /* TodoListViewController.swift in Sources */,
 				CE93F7D920B0A58700DE984A /* BarButtonItemFactory.swift in Sources */,
 				CE93F7D320B0A26D00DE984A /* TodoCreateViewController.swift in Sources */,
@@ -468,6 +482,7 @@
 				CEC5021820B0DEB2006C1F1D /* UITextView+Extensions.swift in Sources */,
 				CEC5024120B112A8006C1F1D /* JDIKitError+ErrorAlert.swift in Sources */,
 				CE93F7C520B0972200DE984A /* RootAppCoordinator.swift in Sources */,
+				CEC5024720B11630006C1F1D /* ItemTableViewCell.swift in Sources */,
 				CEC5021A20B0E159006C1F1D /* ConfirmationDialogFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC5024320B11421006C1F1D /* ItemListDataSource.swift in Sources */,
 				CEC5023B20B0EDE1006C1F1D /* JDIKit.swift in Sources */,
 				CEC5023F20B11053006C1F1D /* JDIKitError.swift in Sources */,
 				CEC5023D20B10E32006C1F1D /* ItemManager.swift in Sources */,

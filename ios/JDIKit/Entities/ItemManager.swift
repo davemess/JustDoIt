@@ -78,4 +78,11 @@ public class ItemManager {
             failure(error)
         }
     }
+
+    public func listDataSource(queryRef: AFNPageRef<Item>) -> ItemListDataSource {
+        let fetchRequst: NSFetchRequest<Item> = queryRef.toFetchRequest()
+        let context = managedObjectContextProvider.viewContext
+        let dataSource = ItemListDataSource(fetchRequest: fetchRequst, managedObjectContext: context)
+        return dataSource
+    }
 }

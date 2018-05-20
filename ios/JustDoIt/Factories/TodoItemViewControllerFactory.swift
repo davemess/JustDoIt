@@ -23,7 +23,7 @@ class TodoItemViewControllerFactory {
     // MARK: - public
     
     func todoListViewController() -> TodoListViewController {
-        let viewController = TodoListViewController()
+        let viewController = TodoListViewController(itemManager: itemManager)
         
         return viewController
     }

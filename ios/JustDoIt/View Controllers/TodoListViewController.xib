@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodoListViewController" customModule="JustDoIt" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="jsa-Mn-UaX" id="DfY-6G-dMC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,22 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="jsa-Mn-UaX">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="1kb-3t-aFJ"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jsa-Mn-UaX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QVV-eq-6m9"/>
+                <constraint firstItem="jsa-Mn-UaX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XDE-oF-RPm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jsa-Mn-UaX" secondAttribute="bottom" id="rWt-ot-txk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jsa-Mn-UaX" secondAttribute="trailing" id="sGA-De-V5B"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="74.5" y="53.5"/>
         </view>
