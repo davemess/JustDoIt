@@ -28,8 +28,14 @@ class TodoListViewController: UIViewController {
         static let add = #selector(addActionSelected)
     }
     
+    private enum State {
+        case empty
+        case loaded
+    }
+    
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var weatherDisplayView: WeatherDisplayView!
+    @IBOutlet private weak var emptyView: UIView!
     
     private let itemManager: ItemManager
     private let dataSource: ItemListDataSource
@@ -37,6 +43,12 @@ class TodoListViewController: UIViewController {
     private let weatherService: WeatherService
     
     weak var delegate: TodoListViewControllerDelegate?
+    
+    private var state: State = .empty {
+        didSet {
+            reloadView(for: state)
+        }
+    }
     
     // MARK: - lifecycle
     
@@ -98,6 +110,23 @@ class TodoListViewController: UIViewController {
         weatherDisplayView.delegate = self
     }
     
+    private func reloadView() {
+        let numberOfItems = dataSource.numberOfItems(in: 0)
+        self.state = (numberOfItems > 0) ? .loaded : .empty
+    }
+    
+    private func reloadView(for state: State) {
+        switch state {
+        case .loaded:
+            tableView.isHidden = false
+            emptyView.isHidden = true
+            
+        case .empty:
+            tableView.isHidden = true
+            emptyView.isHidden = false
+        }
+    }
+    
     // MARK: - data
     
     private func reloadData() {
@@ -112,10 +141,12 @@ class TodoListViewController: UIViewController {
     
     private func handleLoad(_ results: [Item]) {
         tableView.reloadData()
+        reloadView()
     }
     
     private func handleError(_ error: Error) {
         self.present(error)
+        reloadView()
     }
     
     private func toggleDoneState(_ item: Item) {
@@ -190,24 +221,29 @@ extension TodoListViewController: ItemListDataSourceDelegate {
     
     func itemListDataSourceDidReload(_ dataSource: ItemListDataSource) {
         tableView.reloadData()
+        reloadView()
     }
     
     func itemListDataSource(_ dataSource: ItemListDataSource, didInsert item: Item, at indexPath: IndexPath) {
         tableView.insertRows(at: [indexPath], with: .automatic)
+        reloadView()
     }
     
     func itemListDataSource(_ dataSource: ItemListDataSource, didDelete item: Item, at indexPath: IndexPath) {
         tableView.deleteRows(at: [indexPath], with: .automatic)
+        reloadView()
     }
     
     func itemListDataSource(_ dataSource: ItemListDataSource, didUpdate item: Item, at indexPath: IndexPath) {
         tableView.reloadRows(at: [indexPath], with: .automatic)
+        reloadView()
     }
     
     func itemListDataSource(_ dataSource: ItemListDataSource, didMove item: Item, at indexPath: IndexPath, to newIndexPath: IndexPath) {
         tableView.moveRow(at: indexPath, to: newIndexPath)
         tableView.reloadRows(at: [newIndexPath], with: .automatic)
         tableView.scrollToRow(at: newIndexPath, at: .top, animated: true)
+        reloadView()
     }
 }
 

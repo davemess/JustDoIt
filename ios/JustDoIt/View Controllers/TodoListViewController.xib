@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodoListViewController" customModule="JustDoIt" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="rKq-0g-vgX" id="5mR-xZ-Ppa"/>
                 <outlet property="tableView" destination="jsa-Mn-UaX" id="DfY-6G-dMC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weatherDisplayView" destination="uaF-2l-YLS" id="SHa-Cd-dzd"/>
@@ -28,6 +29,24 @@
                         <outlet property="dataSource" destination="-1" id="1kb-3t-aFJ"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKq-0g-vgX">
+                    <rect key="frame" x="0.0" y="20" width="375" height="587"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing to do? Hit the + to add some To-Do items." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DJ-Lg-uA7">
+                            <rect key="frame" x="24" y="50" width="328" height="107.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="0DJ-Lg-uA7" firstAttribute="centerX" secondItem="rKq-0g-vgX" secondAttribute="centerX" id="L1M-TP-Tgj"/>
+                        <constraint firstItem="0DJ-Lg-uA7" firstAttribute="top" secondItem="rKq-0g-vgX" secondAttribute="top" constant="50" id="YKF-jh-JXw"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0DJ-Lg-uA7" secondAttribute="trailing" constant="20" id="cGm-h1-nfn"/>
+                        <constraint firstItem="0DJ-Lg-uA7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rKq-0g-vgX" secondAttribute="leading" constant="20" id="clH-7r-OGe"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaF-2l-YLS" customClass="WeatherDisplayView" customModule="JustDoIt" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                     <subviews>
@@ -112,9 +131,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="rKq-0g-vgX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="25n-JG-YuW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uaF-2l-YLS" secondAttribute="bottom" id="DEG-r2-biU"/>
                 <constraint firstItem="jsa-Mn-UaX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QVV-eq-6m9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rKq-0g-vgX" secondAttribute="trailing" id="Qfi-DK-TeR"/>
                 <constraint firstItem="jsa-Mn-UaX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="XDE-oF-RPm"/>
+                <constraint firstItem="rKq-0g-vgX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kTs-RJ-17m"/>
+                <constraint firstItem="uaF-2l-YLS" firstAttribute="top" secondItem="rKq-0g-vgX" secondAttribute="bottom" id="pKK-nK-sVA"/>
                 <constraint firstItem="uaF-2l-YLS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pRT-rF-ttq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jsa-Mn-UaX" secondAttribute="bottom" id="rWt-ot-txk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jsa-Mn-UaX" secondAttribute="trailing" id="sGA-De-V5B"/>
