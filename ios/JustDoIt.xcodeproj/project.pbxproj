@@ -41,7 +41,6 @@
 		CEC5024E20B1C4FE006C1F1D /* WeatherDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024D20B1C4FE006C1F1D /* WeatherDisplayView.swift */; };
 		CEC5025120B1CEE3006C1F1D /* PermissionError+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5024F20B1CEE3006C1F1D /* PermissionError+Display.swift */; };
 		CEC5025220B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5025020B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift */; };
-		CEC5025420B1DB04006C1F1D /* Austin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CEC5025320B1DB04006C1F1D /* Austin.gpx */; };
 		CEC5025620B1DD3B006C1F1D /* Temperature+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5025520B1DD3B006C1F1D /* Temperature+Formatting.swift */; };
 		CEC5025F20B1E25C006C1F1D /* AFNAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; };
 		CEC5026020B1E25C006C1F1D /* AFNAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73520B0841D00DE984A /* AFNAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,6 +52,7 @@
 		CEC5026620B1E25D006C1F1D /* WeatherService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE93F73920B0841D00DE984A /* WeatherService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEC5026720B1E25D006C1F1D /* JDIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; };
 		CEC5026820B1E25D006C1F1D /* JDIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEC5022820B0EC92006C1F1D /* JDIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D914F1C020B64CB100EA3A03 /* Austin.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D914F1BF20B64CB100EA3A03 /* Austin.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +130,8 @@
 		CEC5024D20B1C4FE006C1F1D /* WeatherDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayView.swift; sourceTree = "<group>"; };
 		CEC5024F20B1CEE3006C1F1D /* PermissionError+Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PermissionError+Display.swift"; sourceTree = "<group>"; };
 		CEC5025020B1CEE3006C1F1D /* UIViewController+PermissionPromptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PermissionPromptController.swift"; sourceTree = "<group>"; };
-		CEC5025320B1DB04006C1F1D /* Austin.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Austin.gpx; path = ../../../../../../../../Desktop/Austin.gpx; sourceTree = "<group>"; };
 		CEC5025520B1DD3B006C1F1D /* Temperature+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Temperature+Formatting.swift"; sourceTree = "<group>"; };
+		D914F1BF20B64CB100EA3A03 /* Austin.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Austin.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,7 +227,7 @@
 		CE65BD4B20706E460094F620 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CEC5025320B1DB04006C1F1D /* Austin.gpx */,
+				D914F1BF20B64CB100EA3A03 /* Austin.gpx */,
 				CE65BD3D20706DC60094F620 /* Assets.xcassets */,
 				CE65BD3F20706DC60094F620 /* LaunchScreen.storyboard */,
 			);
@@ -454,7 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE93F7D020B09E9800DE984A /* TodoListViewController.xib in Resources */,
-				CEC5025420B1DB04006C1F1D /* Austin.gpx in Resources */,
+				D914F1C020B64CB100EA3A03 /* Austin.gpx in Resources */,
 				CE65BD4120706DC60094F620 /* LaunchScreen.storyboard in Resources */,
 				CE93F7D420B0A26D00DE984A /* TodoCreateViewController.xib in Resources */,
 				CEC5024820B11630006C1F1D /* ItemTableViewCell.xib in Resources */,

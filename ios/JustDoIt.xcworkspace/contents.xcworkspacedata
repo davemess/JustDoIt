@@ -28,6 +28,6 @@
       </FileRef>
    </Group>
    <FileRef
-      location = "group:/Users/davidmessing/Documents/Projects/Repos/misc/JustDoIt/ios/JustDoIt.xcodeproj">
+      location = "container:JustDoIt.xcodeproj">
    </FileRef>
 </Workspace>

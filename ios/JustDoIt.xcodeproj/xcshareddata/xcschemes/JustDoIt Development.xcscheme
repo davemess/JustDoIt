@@ -64,7 +64,7 @@
       <AdditionalOptions>
       </AdditionalOptions>
       <LocationScenarioReference
-         identifier = "../../../../../../../Desktop/Austin.gpx"
+         identifier = "../JustDoIt/Resources/Austin.gpx"
          referenceType = "0">
       </LocationScenarioReference>
    </LaunchAction>

@@ -14,7 +14,7 @@ git clone git@github.com:davemess/JustDoIt.git
 ```
 2. Update Carthage dependencies.
 ```
-carthage update --platform iOS
+carthage update --platform iOS --no-build --use-submodules
 ```
 3. Open using Xcode. Build and run the Development scheme. There are multiple schemes (Development, Staging, etc.) included with the project.
 
